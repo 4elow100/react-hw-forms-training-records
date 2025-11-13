@@ -76,6 +76,9 @@ export default function TrainingRecords() {
     setRecords((prev) =>
       [...prev].sort((a, b) => b.date.getTime() - a.date.getTime())
     );
+
+    dateRef.current.value = "";
+    countRef.current.value = "";
   };
 
   const handleDeleteRecord = (e) => {
